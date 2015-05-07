@@ -15,6 +15,7 @@ module FbGraph2
       
       def friend!(user, params = {})
         self.post params, edge: :friends, edge_scope: user
+        user.post params, edge: :friends, edge_scope: self
       end
     end
   end
