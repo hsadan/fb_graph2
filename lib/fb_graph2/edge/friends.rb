@@ -13,7 +13,7 @@ module FbGraph2
         users.present?
       end
       
-      def friend!(params = {})
+      def friend!(user, params = {})
         self.post params, edge: :friends, edge_scope: user
       end
     end
